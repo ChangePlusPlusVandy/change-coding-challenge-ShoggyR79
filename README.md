@@ -1,4 +1,6 @@
-Update information in config.
-install tweepy on running machine (pip install tweepy)
+This program runs using the library of Tweepy and API of Twitter. 
 
-Version 0.0
+TODO:
+
+-Install tweepy (using pip install) on machine.
+-Update "config.py" file with personal API information and Access token from twitter.
