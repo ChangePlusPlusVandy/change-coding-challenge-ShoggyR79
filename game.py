@@ -61,6 +61,7 @@ num_of_questions = int(input("How Many Tweets will you be guessing?"))
 
 question_asked = 0
 correct = 0
+score = 0
 
 # Asking of questions
 while question_asked < num_of_questions:
@@ -74,3 +75,25 @@ while question_asked < num_of_questions:
     # filters out the url again (the filtering done above only serve as a checking mechanism)
 
     filtered_tweet = re.sub(r"http\S+", "", chosen_tweet.full_text)
+
+    # Prints that tweet.
+    print(filtered_tweet + "\ntweeted at " + str(chosen_tweet.created_at))
+
+    player_answer = int(input(" Who wrote this tweet? \n1. Kanye West\n2. Elon Musk\n   Input your answer:" ))
+
+    # Compare player answer with correct answer
+    if (player_answer - 1) == correct_answer:
+        correct += 1
+        print("Correct!")
+    else:
+        print("Wrong, try harder next time~")
+
+    question_asked += 1
+
+print("Calculating score, please wait a few milliseconds!")
+
+score = str(correct) + "/" + str(num_of_questions)
+
+print("Your final score is: " + score)
+
+print("Have a great day!")
