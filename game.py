@@ -2,7 +2,7 @@ import config
 import tweepy
 import re
 import random
-
+import time
 # Can Change, default value to 100 for purpose of
 num_fetched_tweets = 100
 
@@ -57,7 +57,13 @@ tweet_inventory = [kanye_tweets, elon_tweets]
 
 # Start of Game
 print("Welcome to Guess the Tweet (ft. @kanyewest and @elonmusk) ")
+# Using delay to simulate a better game experience
 num_of_questions = int(input("How Many Tweets will you be guessing?"))
+time.sleep(1)
+
+print("Lets Start!")
+time.sleep(2)
+print("\n" * 3)
 
 question_asked = 0
 correct = 0
@@ -87,13 +93,17 @@ while question_asked < num_of_questions:
         print("Correct!")
     else:
         print("Wrong, try harder next time~")
-
+    print("\n" * 5)
+    time.sleep(1)
     question_asked += 1
 
 print("Calculating score, please wait a few milliseconds!")
-
+print("\n" * 3)
+time.sleep(.5)
 score = str(correct) + "/" + str(num_of_questions)
 
 print("Your final score is: " + score)
+print("\n" * 3)
 
+time.sleep(2)
 print("Have a great day!")
