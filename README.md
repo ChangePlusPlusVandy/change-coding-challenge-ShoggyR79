@@ -2,14 +2,14 @@ This program runs using the library of Tweepy and API of Twitter.
 
 FILES:
 
-game.py - the game file that fulfills most, if not all, the basic requirements of the challenge.
+- game.py - the game file that fulfills most, if not all, the basic requirements of the challenge.
 
-game_advance.py - game file that builds upon the first one, but have user enter their own twitter ID instead of Kanye and Elon.
+- game_advance.py - game file that builds upon the first one, but have user enter their own twitter ID instead of Kanye and Elon.
 
 
 TODO/SETUP:
 
--Install tweepy (using pip install) on machine.
+- Install tweepy (using pip install) on machine.
 
--Update "config.py" file with personal API information and Access token from twitter.
+- Update "config.py" file with personal API information and Access token from twitter.
 
