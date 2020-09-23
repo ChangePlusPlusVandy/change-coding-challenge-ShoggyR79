@@ -1,4 +1,12 @@
+Version 2.0
+
+-Fixed a few formatting errors and bugs.
+-added game_advanced.py 
+
+----
+
 Version 1.0
+
 -Added several time delays to simulate a real game experience. Fixed the text formatting of several areas.
 
 
