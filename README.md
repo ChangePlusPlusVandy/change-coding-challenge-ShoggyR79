@@ -17,7 +17,7 @@ TODO/SETUP:
 
 - Update "config.py" file with personal API information and Access token from twitter.
 
-- OPTIONAL - find the twitter ID of two user (if running/test game_advanced.py).
+- OPTIONAL - find the twitter ID of two user (if running/testing game_advanced.py).
 
 
 
