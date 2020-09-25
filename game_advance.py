@@ -15,7 +15,7 @@ auth.set_access_token(config.access_token, config.token_secret)
 
 api = tweepy.API(auth)
 # Start of Game
-print("Welcome to Guess the Tweet 2.0 ")
+print("Welcome to Guess the Tweet 2.0 - by Du Duong ")
 
 # prompts user to send in ids
 print("This program requires Twitter ID of two person.\nYou can use tweeterid.com to find the ID based on username")
@@ -145,4 +145,7 @@ print("Your final score is: " + score)
 print("\n" * 3)
 
 time.sleep(2)
-print("Have a great day!")
+print("Please run the program again if you want to play another round")
+time.sleep(.2)
+print("\n" * 2)
+print("Thats it... Have a great day!")
