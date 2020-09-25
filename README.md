@@ -10,6 +10,8 @@ FILES:
 
 - PATCHNOTE.md - shows progression of the challenge.
 
+- **The other folders are not part of the submission.**
+
 
 TODO/SETUP:
 
@@ -18,7 +20,6 @@ TODO/SETUP:
 - Update "config.py" file with personal API information and Access token from twitter.
 
 - OPTIONAL - find the twitter ID of two user (if running/testing game_advanced.py).
-
 
 
 
