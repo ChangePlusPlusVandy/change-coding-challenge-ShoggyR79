@@ -18,3 +18,9 @@ TODO/SETUP:
 
 - OPTIONAL - find the twitter ID of two user (if running/test game_advanced.py).
 
+
+
+
+**Note**: 
+- The game files assume that the number of tweets of the users exceeds the number of questions that will be asked
+- Number of Generated Tweets can be changed by editting ```number_fetched_tweets``` value.
