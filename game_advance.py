@@ -19,8 +19,25 @@ print("Welcome to Guess the Tweet 2.0 ")
 
 # prompts user to send in ids
 print("This program requires Twitter ID of two person.\nYou can use tweeterid.com to find the ID based on username")
-first_id = input("Please enter the ID for the first person:    ")
-second_id = input("Please enter the ID for the second person:    ")
+#first_id = input("Please enter the ID for the first person:    ")
+#second_id = input("Please enter the ID for the second person:    ")
+# Loops until correct info is entered
+while True:
+    try:
+        first_id = int(input("Please enter the ID for the first person:    "))
+    except ValueError:
+        print("Sorry, it seems you have entered something wrong, please try again.")
+        print("\n" * 2)
+    else:
+        break
+while True:
+    try:
+        second_id = int(input("Please enter the ID for the second person:    "))
+    except ValueError:
+        print("Sorry, it seems you have entered something wrong, please try again.")
+        print("\n" * 2)
+    else:
+        break
 
 # gets the name of the two users
 first_name = (api.get_user(first_id)).name
@@ -56,7 +73,8 @@ for status in tweepy.Cursor(api.user_timeline,
     filtered_tweet = re.sub(r"http\S+", "", status.full_text)
 
     # if tweet still contains stuff after URL is deleted, it is added to stash
-    if filtered_tweet:
+
+    if filtered_tweet and not filtered_tweet.isspace():
         second_tweets.append(status)
 
 # adds the list of tweets into a list of tweets
@@ -92,7 +110,15 @@ while question_asked < num_of_questions:
     print(filtered_tweet + "\ntweeted at " + str(chosen_tweet.created_at))
 
     print(" Who wrote this tweet? \n1. "+ first_name + "\n2. "+ second_name)
-    player_answer = int(input("     Input your answer:"))
+
+    # loop until correct input is supplied.
+    while True:
+        player_answer = int(input("     Input your answer:"))
+        if player_answer not in (1,2):
+            print("Sorry, it please enter only the value '1' or '2' ")
+            continue
+        else:
+            break
 
     # Compare player answer with correct answer
     if (player_answer - 1) == correct_answer:
@@ -101,7 +127,7 @@ while question_asked < num_of_questions:
     else:
         print("Wrong, try harder next time~")
     print("\n" * 5)
-    time.sleep(1)
+    time.sleep(.3)
     question_asked += 1
 
 print("Calculating score, please wait a few milliseconds!")
