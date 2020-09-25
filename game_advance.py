@@ -19,8 +19,7 @@ print("Welcome to Guess the Tweet 2.0 ")
 
 # prompts user to send in ids
 print("This program requires Twitter ID of two person.\nYou can use tweeterid.com to find the ID based on username")
-#first_id = input("Please enter the ID for the first person:    ")
-#second_id = input("Please enter the ID for the second person:    ")
+
 # Loops until correct info is entered
 while True:
     try:
