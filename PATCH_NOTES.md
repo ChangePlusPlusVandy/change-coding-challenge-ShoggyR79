@@ -1,3 +1,10 @@
+**Version Submission**
+
+- Added loops to ensure player does not mess up.
+- Fixed filtering system that sometimes let blank message through.
+
+----
+
 Version 2.0
 
 -Fixed a few formatting errors and bugs.
