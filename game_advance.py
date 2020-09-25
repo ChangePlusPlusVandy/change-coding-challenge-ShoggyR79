@@ -19,7 +19,8 @@ print("Welcome to Guess the Tweet 2.0 ")
 
 # prompts user to send in ids
 print("This program requires Twitter ID of two person.\nYou can use tweeterid.com to find the ID based on username")
-
+#first_id = input("Please enter the ID for the first person:    ")
+#second_id = input("Please enter the ID for the second person:    ")
 # Loops until correct info is entered
 while True:
     try:
@@ -42,7 +43,7 @@ while True:
 first_name = (api.get_user(first_id)).name
 second_name = (api.get_user(second_id)).name
 
-print("Please wait will we gather tweets of " + first_name + " and " + second_name)
+print("Please wait while we gather tweets of " + first_name + " and " + second_name)
 
 # gets x amount of tweets from "user_id"
 
@@ -112,13 +113,19 @@ while question_asked < num_of_questions:
 
     # loop until correct input is supplied.
     while True:
-        player_answer = int(input("     Input your answer:"))
-        if player_answer not in (1,2):
-            print("Sorry, it please enter only the value '1' or '2' ")
-            continue
+        try:
+            player_answer = int(input("     Input your answer:"))
+        except ValueError:
+            print("Please supply an integer")
+            print("\n" * 2)
         else:
-            break
-
+            if player_answer not in (1,2):
+                print("Sorry, it please enter only the value '1' or '2' ")
+                print("\n" * 2)
+                continue
+            else:
+                break
+    time.sleep(.3)
     # Compare player answer with correct answer
     if (player_answer - 1) == correct_answer:
         correct += 1
