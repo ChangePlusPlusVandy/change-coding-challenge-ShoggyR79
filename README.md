@@ -25,5 +25,5 @@ TODO/SETUP:
 
 **Note**: 
 - The game files assume that the number of tweets of the users exceeds the number of questions that will be asked
-- Number of Generated Tweets can be changed by editting ```number_fetched_tweets``` value.
+- Number of Generated Tweets can be changed by editting ```num_fetched_tweets``` value.
 - game_advanced.py is significantly better than game.py as it is the upgraded version with many bugs fixes - please use that when evaluating...!
